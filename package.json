@@ -1,0 +1,40 @@
+{
+	"name": "hello-emdash",
+	"version": "0.1.0",
+	"description": "Hello Dolly for EmDash — a random quote of inspiration in your admin dashboard",
+	"type": "module",
+	"main": "dist/index.mjs",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.mts"
+		},
+		"./sandbox": "./dist/sandbox-entry.mjs"
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "tsdown src/index.ts src/sandbox-entry.ts --format esm --dts --clean",
+		"dev": "tsdown src/index.ts src/sandbox-entry.ts --format esm --dts --watch",
+		"typecheck": "tsc --noEmit"
+	},
+	"keywords": [
+		"emdash",
+		"cms",
+		"plugin",
+		"quote",
+		"hello-dolly"
+	],
+	"author": "Abhishek <abhishek@whoisabhi.com>",
+	"license": "MIT",
+	"peerDependencies": {
+		"emdash": ">=0.9.0"
+	},
+	"devDependencies": {
+		"emdash": "^0.9.0",
+		"tsdown": "^0.20.3",
+		"typescript": "^5.9.3"
+	}
+}
