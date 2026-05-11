@@ -7,7 +7,7 @@ Displays a random quote from computing pioneers in your admin dashboard. A small
 ## Installation
 
 ```bash
-npm install hello-emdash
+npm install github:deshabhishek007/hello-emdash
 ```
 
 ## Usage
